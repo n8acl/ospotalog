@@ -47,7 +47,7 @@ It was also designed to be installed on a central webserver for the site so that
 
 ## Getting Started
 
-This application can be run either on a regular webserver/databse server setup or it can be run in Docker. To run in Docker, please visit 
+This application can be run either on a regular webserver/databse server setup or it can be run in Docker. To run in Docker, please visit [https://hub.docker.com/r/n8acl/ospotalog](https://hub.docker.com/r/n8acl/ospotalog)
 
 To run on a regular webserver, follow these directions:
 
