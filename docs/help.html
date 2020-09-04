@@ -1,0 +1,106 @@
+<html>
+<head>
+<title>phpContestLogger - OSPOTA</title>
+</head>
+<body>
+<h1>phpContestLogger - Ohio State Parks on the Air</h1>
+<hr>
+<h2>Table of Contents</h2>
+<ul>
+    <li>About</li>
+    <li>Header</li>
+    <li>Home</li>
+    <li>Settings</li>
+    <li>Dashboard</li>
+</ul>
+
+<h3>About</h3>
+Developed by: Jeff Lehman, N8ACL<br>
+Email: n8acl@protonmail.com<br>
+Telegram: @Ravendos<br>
+Twitter: @n8acl<br>
+<br>
+
+This program was designed as a lightweight, no frills logging program. There is no rig control. There are no maps. There are no graphics. It's just a plain and simple 
+logging program that is OS agnostic. Since you can run PHP on any platform and the software is accessed from a browser, any OS can run it, making it more robust and versitile.<br>
+
+<h3>Header Information</h3>
+This consists of navigation buttons and will appear on every page in the program for easy navigation.
+
+<ul>
+    <li>Home: This button takes you to the home screen, which is the main loggin screen where most things take place.</li>
+    <li>Settings: This is where the settings are set for the program that help control most aspects.</li>
+    <li>Dashboard: This is the contest dashboard that can be run on another screen for others at the contest site to be able to see what is going on. 
+        This helps to keep people from looking over the sholder of the logger and bothering the operator and logger with questions during the contest</li>
+    <li>Help: This help document.</li>
+</ul>
+
+<h3>Home</h3>
+This is where all the logging takes place. This is the main page for the contest.<br><br>
+
+
+First you will see the header section. This is described above.<br><br>
+
+
+Next is the logging section. Here you see:<br>
+<ul>
+    <li>Your Local Park information. This is the park you are in along with it's OSPOTA ID, WWFF ID and POTA ID, in case they should be needed.</li>
+    <li>Your Exchange. This is your cllsign and park id. This is so you have easy reference for he contest.</li>
+    <li>The next line has the local time and UTC time. This is just for reference. This is also not real time, it is a snap shot of time from when the page was last reloaded. If you want to see the current time, just reload the page.<br>
+    This is is also where you set the band you are working and also what band privledges based on the licence class you set on the settings page. <br>
+    To set the band, choose the band you will be working from the drop down and click the set button. The page will reload and the new band set.</li>
+    <li>Callsign Received: This is the callsign that you get from teh other station.</li>
+    <li>Ohio State Park ID: This is the Park ID of the other station, like LMI for Little Miami or ADA for Adams lake.</li>
+    <li>State or DX: If the other station is not in an Ohio State Park, you would put their state, or if outside the country, DX.</li>
+    <ul>
+        <li>PLEASE NOTE: If a park ID is entered, do not enter a state. If a state is entered, park ID should be blank. PLease do not do like LMI and OH.</li>
+    </ul>
+    <li>Finally in this section are the buttons under the fields:</li>
+    <ul>
+        <li>Submit: This will save the entry to the log database and check for a dupe. If the station is a dupe, it will not save it and will notify you and clear the fields. Otherwise if the contact is not a dupe, it will be saved with no notification. The contacted logged will appear in the grids below.</li>
+        <li>Check Dupe: This will manually check your log for a dupe. If the station is a dupe, it will notify you and clear the entry fields to reset. If the contact is not a dupe, it will let you know and leave the contact information in the fields.</li>
+        <li>Clear: If you make a mistake, click this to clear out the entry fields and try again.</li>
+    </ul>
+</ul>
+
+Last on this page is the statistics sections (from left to right):
+<ul>
+    <li>Contacts grids: This will show the last 10 contacts for the current band you are working and the last 10 contacts over all under that.</li>
+    <li>Score/Statistics Box: This shows the what your current score is and total contacts, parks worked and states worked.</li>
+    <li>Parks worked/to be worked grids: These show what parks have been worked and what parks still need to be worked.</li>
+</ul>
+
+<h3>Settings</h3>
+This is where all the settings and configurations for the program are handled. This page is broken up into roughly 3 sections:
+
+<ul>
+    <li>Settings Section:</li>
+    <ul>
+        <li>Contest Callsign: This is your callsign that you will be using for your operation. This can be your personal callsign or the callsign of a group or organization.</li>
+        <li>Club Name: This is the name of either ther person or the group that is operating.</li>
+        <li>Location: This is the park or state you are working from.</li>
+        <li>License Class: The class of license of the callsign being used. This is needed for the frequency band spread on the first page.</li>
+        <li>Opeartors: If this is a group event, you can put the callsigns of the other operators here.</li>
+        <li>Will Submit Via Cabrillo Format?: This is used to determine whether to include the cabrillo bonus score.</li>
+    </ul>
+    
+    Once you have made your changes, click the Update Button, or to clear out the fields, click clear.
+    <li>Contact Information: The OSPOTA commitee wants contact information submitted in the Cabrillo file when the log is submitted, so this section is what sets that. This can be a person or group, they just need contact information in case 
+        they need to get ahold of someone with questions.
+    </li>
+    <li>Data Control Buttons:</li>
+    <ul>
+        <li>Delete Database: This will clear out the database for a new contest. It resets the log database.</li>
+        <li>Database Cabrillo Export: This will export the file in the correct cabrillo format for submission to the OSPOTA committee. The program will compile the log and then ask you to save the file.</li>
+    </ul>
+</ul>
+
+<h3>Dashboard</h3>
+This a screen that is designed to be run on a seperate monitor as a dashboard some place seperaete from the operating area. I know that I get annoyed with "Hey how are we doing? " questions all the time when I am operating the radio or logging
+so this was designed as a way that people can see what is going on. This could be run on a second monitor turned around on the operating table or on a Raspberry pi tied to a seperate monitor on the other side of the operating site
+for others to see. <br><br>
+
+<h3>Help</h3>
+This help Docment.
+</body>
+</html>
