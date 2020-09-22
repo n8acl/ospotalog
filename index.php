@@ -48,7 +48,7 @@ echo "<h2>Exchange: " . $contestcallsign . ", " . $location ."</h2>";
 echo '<b>Local Time:</b> <input type=text value = "' . $localtime . '" readonly style="width: 50px">&nbsp;&nbsp;';
 echo '<b>UTC Time: <input type=text value = "' . $gmtime . '" readonly style="width: 50px">&nbsp;&nbsp;';
 echo "<b>Band:</b> ";
-$sql = "select distinct band, orderby from sysbands order by orderby";
+$sql = "select distinct band, orderby from sysbands where mode = 1 order by orderby";
 $result = $conn->query($sql);
 
 echo '<select name=band style="width: 60px">';
@@ -75,11 +75,11 @@ echo "</form> <br><br>";
 
 echo "<form method=post action=log.php>";
 echo "<b>Callsign Received:</b> ";
-echo '<input type=text value="'. $_SESSION["callsign"] . '" name=callsign style="width: 75px" autofocus>&nbsp;&nbsp;';
+echo '<input type=text value="'. $_SESSION["callsign"] . '" name=callsign style="width: 75px" tabindex="1" autofocus>&nbsp;&nbsp;';
 echo "<b>Ohio State Park ID:</b> ";
-echo '<input type=text value="'. $_SESSION["parkid"] . '" name=parkid style="width: 50px">&nbsp;&nbsp;';
+echo '<input type=text value="'. $_SESSION["parkid"] . '" name=parkid style="width: 50px" tabindex="2">&nbsp;&nbsp;';
 echo "<b>State or DX:</b> ";
-echo '<input type=text value="'. $_SESSION["stdx"] . '" name=stdx style="width: 50px"><br><br>';
+echo '<input type=text value="'. $_SESSION["stdx"] . '" name=stdx style="width: 50px" tabindex="3"><br><br>';
 echo '<input name="log" type="submit" value="Submit"><input name = "log" type="submit" value="Check Dupe"><input name="log" type="submit" value="Clear">';
 echo "</form>";
 

@@ -16,7 +16,7 @@ if ($contestdashboard == 0) {
 
 		while($row = $result->fetch_assoc()) {
 			echo "<tr>";
-			echo "<td>" . $row["contactid"] . "</td>";
+			echo '<td><a href="editcontact.php?id=' . $row["contactid"] . '">'. $row["contactid"] . '</td>';
 			echo "<td>" . $row["contactcallsign"] . "</td>";
 			echo "<td>";
 			if ($row["parkid"] == "0") {

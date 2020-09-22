@@ -11,11 +11,8 @@ switch ($_POST["function"]) {
 		header("location: dashboard.php");
 		break;
 	case "Help":
-		header("location: index.php");
+		header("location: ./docs/help.html");
 		break;
-	case "GOTA Logging":
-		header("location: gota.php");
-		break;	
 	case "Database Cabrillo Export":
 		header("location: export.php");
 		break;

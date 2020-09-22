@@ -1,12 +1,12 @@
 <?php session_start();
 
-$sql = "select count(distinct parkid) as parkcnt from ospotalog where parkid <> 0";
+$sql = "select count(distinct parkid) as parkcnt from ospotalog where parkid <> 76";
 $result = $conn->query($sql);
 while($row = $result->fetch_assoc()) {
 	$workedparkcnt = $row["parkcnt"];
 }
 
-$sql = "select count(ospotaparkid) as parkcnt from ospotaparks where ospotaparkid not in (select distinct parkid from ospotalog)";
+$sql = "select count(ospotaparkid) as parkcnt from ospotaparks where ospotaparkid not in (select distinct parkid from ospotalog) and ospotaparkid <> 76";
 $result = $conn->query($sql);
 while($row = $result->fetch_assoc()) {
 	$parkcnt = $row["parkcnt"];
@@ -18,7 +18,7 @@ echo "<tr><td valign = top>";
 	echo "<tr>";
 	echo "<th>Park ID</th><th>Park Name</th>";
 	echo "</tr>";
-	$sql = "select * from ospotaparks where ospotaparkid in (select distinct parkid from ospotalog) order by parkname";
+	$sql = "select * from ospotaparks where ospotaparkid in (select distinct parkid from ospotalog) and ospotaparkid <> 76 order by parkname";
 	$result = $conn->query($sql);
 	while($row = $result->fetch_assoc()) {
 		echo "<tr>";
@@ -35,7 +35,7 @@ echo "<td valign = top>";
 	echo "<tr>";
 	echo "<th>ParkID</th><th>Park Name</th>";
 	echo "</tr>";
-	$sql = "select * from ospotaparks where ospotaparkid not in (select distinct parkid from ospotalog) order by parkname";
+	$sql = "select * from ospotaparks where ospotaparkid not in (select distinct parkid from ospotalog) and ospotaparkid <> 76 order by parkname";
 	$result = $conn->query($sql);
 	while($row = $result->fetch_assoc()) {
 		echo "<tr>";

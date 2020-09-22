@@ -56,7 +56,7 @@ echo "<tr>";
 echo "<td>";
 echo "Location: ";
 
-$sql = "select * from ospotaparks order by parkname";
+$sql = "select * from ospotaparks where parkid <> '' order by parkname";
 $result = $conn->query($sql);
 
 echo "<select name=location>";
@@ -80,6 +80,7 @@ echo $row["parkid"] . " - ". $row["parkname"] . "</option>";
 echo "</select><br>";
 echo "</td>";
 echo "</tr>";
+echo "<tr>";
 echo "<td>";
 echo "License Class: ";
 
@@ -103,6 +104,34 @@ while($row = $result->fetch_assoc()) {
 		}
 	}
 echo $row["licenseclass"] . "</option>";
+}
+echo "</select><br>";
+echo "</td>";
+echo "</tr>";
+echo "<tr>";
+echo "<td>";
+echo "Entry Class: ";
+
+$sql = "select * from ospotaclass";
+$result = $conn->query($sql);
+
+echo "<select name=entryclass>";
+while($row = $result->fetch_assoc()) {
+	echo "<option value=". $row["syslicenseclassid"];
+	if ($row["ospotaclassid"] == $entrycat) {
+		if ($contactcount >=1) {
+			echo " selected disabled=disabled>";
+		} else {
+			echo " selected>";
+		}
+	} else {
+		if ($contactcount >=1) {
+			echo " disabled=disabled>";
+		} else {
+			echo ">";
+		}
+	}
+echo $row["classid"] . " - " . $row["classname"] . "</option>";
 }
 echo "</select><br>";
 echo "</td>";

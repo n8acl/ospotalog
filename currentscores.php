@@ -6,7 +6,7 @@ while($row = $result->fetch_assoc()) {
 	$totalcontacts = $row["contactcnt"];
 }
 
-$sql = "select count(distinct parkid) as parkcnt from ospotalog where parkid <> 0";
+$sql = "select count(distinct parkid) as parkcnt from ospotalog where parkid <> 76";
 $result = $conn->query($sql);
 while($row = $result->fetch_assoc()) {
 	if ($row["parkcnt"] == 0) {
@@ -16,7 +16,7 @@ while($row = $result->fetch_assoc()) {
 	}
 }
 
-$sql = "select count(distinct stateid) as statecnt from ospotalog where stateid <> 0";
+$sql = "select count(distinct stateid) as statecnt from ospotalog where stateid <> 52";
 $result = $conn->query($sql);
 while($row = $result->fetch_assoc()) {
 	$totalstates = $row["statecnt"];

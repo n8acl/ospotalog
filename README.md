@@ -74,7 +74,7 @@ Once the repo has been cloned or copied into the web root folder, you are ready 
 
 ## Starting the Program
 
-First you will need to navigate to the database create script. If you do not do this first, the application will error out till the database is created.
+First you will need to navigate to the database create script omn the first run of the software. If you do not do this first, the application will error out till the database is created. Once this process has been run the first time, there is no need to run it again unless you are moving the program or something. 
 
 your-web-address/create.php
 
@@ -107,3 +107,8 @@ If you reach out to me and have an error, please include what error you are gett
 ## Change Log
 
 * 08/30/2020 - Initial Release
+* 09/21/2020 - Fixes for some glaring errors
+    - Added ability ot edit contact after logging in case of a mistake.
+    - Fixed the frequency privledges to show properly for band, mode and license class
+    - Re-added the ability to select entry class on the settings page.
+

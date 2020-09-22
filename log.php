@@ -65,7 +65,7 @@ while($row = $result->fetch_assoc()) {
 }
 
 if ($_POST["parkid"] == "") {
-	$parkid = 0;
+	$parkid = 76;
 } else {
 	$sql = "select ospotaparkid from ospotaparks where parkid = '" . strtoupper($_POST["parkid"]) . "'";
 	$result = $conn->query($sql);
@@ -76,7 +76,7 @@ if ($_POST["parkid"] == "") {
 }
 
 if ($_POST["stdx"] == "") {
-	$stateid = 0;
+	$stateid = 52;
 } else {
 	$sql = "select sysstatesid from sysstates where stateabrv = '" . strtoupper($_POST["stdx"]) . "'";
 	$result = $conn->query($sql);

@@ -9,6 +9,7 @@ if ($_POST["function"] == "Update") {
 	$sql = $sql . "clubname = '" . $_POST["clubname"] . "', ";
 	$sql = $sql . "parkid = " . $_POST["location"] . ", ";
 	$sql = $sql . "licenseclassid = " . $_POST["licenseclass"] . ", ";
+	$sql = $sql . "classid = " . $_POST["entryclass"] . ", ";
 	$sql = $sql . "operators = '" . $_POST["operators"] . "', ";
 	$sql = $sql . "contactname = '" . $_POST["contactname"] . "', ";
 	$sql = $sql . "contactaddress = '" . $_POST["contactaddress"] . "', ";
